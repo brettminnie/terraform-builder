@@ -1,0 +1,16 @@
+file:
+  /usr/bin/terraform:
+    exists: true
+  /usr/bin/terragrunt:
+    exists: true
+user:
+  app:
+    exists: true
+    groups:
+    - app
+    home: /app
+  terraform:
+    exists: true
+    groups:
+    - terraform
+    home: /home/terraform

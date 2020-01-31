@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  terraform-builder:
+    image: bdbstudios/terraform-builder
+    build: .
+    volumes:
+      - ../../terraform:/home/terraform/data:z
+    entrypoint: terragrunt plan-all
+    working_dir: /home/terraform/data
